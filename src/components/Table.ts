@@ -126,6 +126,122 @@ class RealState extends Property {
 }
 
 class Utility extends Property {
-    
+    constructor(name: String, quantity: number, location: number[][], owner: String, classif: String, price: number, rent: number,
+        mortgage: number){
+            super(name, quantity, location, owner, classif, price, rent, mortgage);
+    }
 }
 
+class Card implements spot {
+    name: String;
+    quantity: number;
+    location: number[][];
+    private type: String;
+    private description: String;
+    private action: number;
+
+    constructor(name: String, quantity: number, location: number[][], type: String, description: String, action: number){
+        this.name = name;
+        this.quantity = quantity;
+        this.location = location;
+        this.type = type;
+        this.description = description;
+        this.action = action;
+    }
+
+    getName(): String {
+        return this.name;
+    }
+
+    getQuantity(): number {
+        return this.quantity;
+    }
+
+    getLocation(): number[][] {
+        return this.location;
+    }
+
+    getType(): String {
+        return this.type;
+    }
+
+    getDescription(): String {
+        return this.description;
+    }
+
+    getAction(): number {
+        return this.action;
+    }
+}
+
+class Payable implements spot {
+    name: String;
+    quantity: number;
+    location: number[][];
+    private type: String;
+    private price: number;
+
+    constructor(name: String, quantity: number, location: number[][], type: String, price: number){
+        this.name = name;
+        this.quantity = quantity;
+        this.location = location;
+        this.type = type;
+        this.price = price;
+    }
+
+    getName(): String {
+        return this.name;
+    }
+
+    getQuantity(): number {
+        return this.quantity;
+    }
+
+    getLocation(): number[][] {
+        return this.location;
+    }
+
+    getType(): String {
+        return this.type;
+    }
+
+    getPrice(): number {
+        return this.price;
+    }
+}
+
+class Kiosk implements spot {
+    name: String;
+    quantity: number;
+    location: number[][];
+    private type: String;
+    private action: number;
+
+    constructor(name: String, quantity: number, location: number[][], type: String, description: String, action: number){
+        this.name = name;
+        this.quantity = quantity;
+        this.location = location;
+        this.type = type;
+        this.action = action;
+    }
+
+    getName(): String {
+        return this.name;
+    }
+
+    getQuantity(): number {
+        return this.quantity;
+    }
+
+    getLocation(): number[][] {
+        return this.location;
+    }
+
+    getType(): String {
+        return this.type;
+    }
+
+    getAction(): number {
+        return this.action;
+    }
+}
